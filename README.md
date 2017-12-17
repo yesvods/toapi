@@ -20,7 +20,7 @@ Toapi provide multi cache for every page u visit. So, don't worry about u make a
 
 ## Demo
 
-![](docs/imgs/toapi.gif)
+[![asciicast](https://asciinema.org/a/153102.png)](https://asciinema.org/a/153102)
 
 ## Get Started
 

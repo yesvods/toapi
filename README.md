@@ -1,10 +1,8 @@
-## Toapi
+## ToAPI
 
 Make Every website provides APIs.
 
 ![](docs/imgs/api.png)
-
-![](docs/imgs/toapi.gif)
 
 ## Introduction
 
@@ -19,6 +17,10 @@ All we need is a Temme snippet.
 Toapi provide multi cache for every page u visit. So, don't worry about u make a huge trivial ddos like to the website.
 
 ![](docs/imgs/diagram.png)
+
+## Demo
+
+![](docs/imgs/toapi.gif)
 
 ## Get Started
 

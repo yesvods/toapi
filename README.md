@@ -20,14 +20,16 @@ Toapi provide multi cache for every page u visit. So, don't worry about u make a
 
 ## Get Started
 
-### Instsll
+### Install
 
 ```bash
 git clone git@github.com:yesvods/toapi.git
-npm install
+cd toapi && npm install
 ```
 
 ### Start Example
+
+* Node Require: 8.6+ to support async function
 
 ```bash
 npm start
@@ -50,7 +52,7 @@ Let's say we need to visit the job detail `API` of `lagou`.
 
 Such as `https://www.lagou.com/jobs/3616345.html`
 
-We just write a temme selector like:
+We just write a [temme](https://github.com/shinima/temme) selector like:
 
 ```
 ...
@@ -63,6 +65,8 @@ We just write a temme selector like:
 }
 ...
 ```
+
+If u don't know what `temme` is. Maybe u can ref this: https://github.com/shinima/temme
 
 And then `register` it!
 

@@ -1,13 +1,13 @@
 {
   "name": "toapi",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "DEBUG=info,debug node example/lagou.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jogis",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.3.0",
     "debug": "^3.1.0",

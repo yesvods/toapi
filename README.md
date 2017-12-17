@@ -2,7 +2,7 @@
 
 Make Every website provides APIs.
 
-![](api.png)
+![](docs/imgs/api.png)
 
 ## Introduction
 
@@ -16,24 +16,33 @@ All we need is a Temme snippet.
 
 Toapi provide multi cache for every page u visit. So, don't worry about u make a huge trivial ddos like to the website.
 
-![](diagram.png)
+![](docs/imgs/diagram.png)
 
 ## Get Started
 
 ### Instsll
 
 ```bash
-$ npm install
+git clone git@github.com:yesvods/toapi.git
+npm install
 ```
 
 ### Start Example
 
 ```bash
-$ npm start
+npm start
 # then visit localhost:3000/job/3616345
 ```
 
 That's all, can't be simple much more.
+
+## NPM
+
+Install the NPM module:
+
+```
+npm install toapi
+```
 
 ### Usage
 

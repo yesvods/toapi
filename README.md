@@ -34,7 +34,7 @@ npm start
 # then visit localhost:3000/job/3616345
 ```
 
-That's all, can't be simple much more.
+That's all, can't be simple much more. Read more about [example](example).
 
 ## NPM
 

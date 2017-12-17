@@ -66,8 +66,6 @@ const register = async ({ routeName, matchUrl, selector, waitUntil }) => {
         log.error(`Parse html with temme error`)
         log.error(e)
       }
-      console.log(html)
-      console.log(selector)
       _.set(selectorHtmlToJSON, `${selectorHash}.${htmlHash}`, json)
       log.info('All done!')
     }

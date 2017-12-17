@@ -1,5 +1,9 @@
 const toapi = require('../src/index')
 
+toapi.start(2233, {
+  waitUntil: 'domcontentloaded',
+})
+
 toapi.register({
   routeName: '/list/:key',
   matchUrl:
@@ -21,5 +25,3 @@ toapi.register({
 //   matchUrl: 'https://www.lagou.com/jobs/:id.html',
 //   selector: selector,
 // })
-
-toapi.start(3000)

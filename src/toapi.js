@@ -24,7 +24,13 @@ const parseToRoute = url => {
 let htmlStorage = {}
 let selectorHtmlToJSON = {}
 
-const register = async ({ routeName, matchUrl, selector, waitUntil }) => {
+const register = async ({
+  routeName,
+  matchUrl,
+  selector,
+  waitUntil,
+  timeout,
+}) => {
   if (!routeName) {
     routeName = parseToRoute(matchUrl).routeName
   }
@@ -43,7 +49,11 @@ const register = async ({ routeName, matchUrl, selector, waitUntil }) => {
       log.info(`Found the HTML cache, use it!`)
     } else {
       log.info(`HTML not found, requesting.. ${targetUrl}`)
-      const { success, content } = await fetch({ url: targetUrl, waitUntil })
+      const { success, content } = await fetch({
+        url: targetUrl,
+        waitUntil,
+        timeout,
+      })
       if (!success) {
         log.error(`Request ${targetUrl} error`)
         throw new Error(`Request ${targetUrl} error`)
@@ -78,4 +88,7 @@ const middleware = async (ctx, next) => {
   return router.routes()(ctx, next)
 }
 
-module.exports = { register, middleware }
+module.exports = {
+  middleware,
+  register,
+}

@@ -4,6 +4,8 @@ Make Every website provides APIs.
 
 ![](docs/imgs/api.png)
 
+![](docs/imgs/toapi.gif)
+
 ## Introduction
 
 Topapi is a supper slight server framework, which provide one way to ask for every website to provide apis.
@@ -71,15 +73,58 @@ If u don't know what `temme` is. Maybe u can ref this: https://github.com/shinim
 And then `register` it!
 
 ```js
-const toapi = require('toapi')
+const ToAPI = require('toapi')
 
-toapi.register({
+ToAPI.register({
   routeName: '/job/:id',
   matchUrl: 'https://www.lagou.com/jobs/:id.html',
   selector: selector,
 })
 
-toapi.start(3000)
+ToAPI.start(3000)
 ```
 
 All things are done, enjoy ur website swimming.
+
+### API
+
+#### ToAPI.start(port, options)
+
+Start the `ToAPI` server, u can continue to `register` route after server started.
+
+* port
+  * the starting port
+* options
+  * watiUntil, defaults to `domcontentloaded`
+    * Spec the browser event that represent page data is ready.
+    * more options can be see [here](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagegotourl-options)
+  * timeout, defaults to `30000`
+    * Spec timeout value when requesting to the target page.
+
+```js
+// pageA will be timeout after 30000(default) ms
+ToAPI.register(pageA)
+
+ToAPI.start(3000, { timeout: 60000 })
+
+// pageB will be timeout after 60000 ms
+ToAPI.register(pageB)
+```
+
+#### ToAPI.register(options)
+
+Register the page route to be served.
+
+* routeName (optional)
+  * The same as koa route
+  * `ToAPI` will parse from `matchUrl` if not specified.
+  * eample: `/page/:id`
+* matchUrl
+  * The target website match route
+  * example: `http://example.com/page/:id`
+* selector (optional)
+  * The [Temme](https://github.com/shinima/temme) Selector to spec page
+* waitUntil
+  * DefaultsTo: `domcontentloaded`
+* timeout
+  * DefaultsTo: `30000`

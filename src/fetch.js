@@ -1,10 +1,14 @@
-const fetch = async ({ url, waitUntil = 'domcontentloaded' }) => {
+const fetch = async ({
+  url,
+  waitUntil = 'domcontentloaded',
+  timeout = 30000,
+}) => {
   const page = await browser.newPage()
   let content
   log.info(`Waiting Untiling page ${waitUntil}`)
   try {
     await page.goto(url, {
-      timeout: 60 * 1000,
+      timeout,
       waitUntil: [
         waitUntil,
         // 'load',

@@ -6,7 +6,7 @@ Make Every website provides APIs.
 
 ## Introduction
 
-Topapi is a supper slight server framework, which provide one way to ask for every website to provide apis.
+Toapi is a supper slight server framework, which provide one way to ask for every website to provide apis.
 
 We don't need to climb the website day by day. Because they should provide the API we need!
 
